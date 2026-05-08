@@ -783,7 +783,7 @@ fitbSubmitBtn.addEventListener("click",()=>{
     sfxCorrect();
     teams[currentTeam].score+=PASS_POINTS[Math.min(passCount,PASS_POINTS.length-1)];
     renderTeams(); questionCompleted=true;
-    showAnswerBtn.disabled=false; nextBtn.disabled=false;
+    showAnswerBtn.disabled=false; nextBtn.disabled=true;
     saveToLocal();
   }else{
     fitbInput.classList.add("wrong"); sfxWrong();
