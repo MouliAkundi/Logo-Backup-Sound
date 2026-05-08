@@ -765,7 +765,14 @@ function handleOpt(btn,i){
     if(Array.from(optionsWrap.children).every(b=>b.disabled)){
       clearInterval(timerId); showAnswerBtn.disabled=false; return;
     }
-    clearInterval(timerId); handlePassOrEnd();
+    clearInterval(timerId);
+
+if(currentType==="TF"){
+    questionCompleted = true;
+    showAnswerBtn.disabled = false;
+}else{
+    handlePassOrEnd();
+}
   }
 }
 
