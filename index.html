@@ -757,6 +757,10 @@ function handleOpt(btn,i){
     renderTeams(); showAnswerBtn.disabled=false; saveToLocal();
   }else{
     btn.classList.add("wrong"); sfxWrong(); btn.disabled=true;
+    setTimeout(() => {
+    btn.classList.remove('wrong');
+    btn.disabled = false;
+}, 1000);
     if(Array.from(optionsWrap.children).every(b=>b.disabled)){
       clearInterval(timerId); showAnswerBtn.disabled=false; return;
     }
