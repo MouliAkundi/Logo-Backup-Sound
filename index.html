@@ -757,10 +757,11 @@ function handleOpt(btn,i){
     renderTeams(); showAnswerBtn.disabled=false; saveToLocal();
   }else{
     btn.classList.add("wrong"); sfxWrong(); btn.disabled=true;
-    setTimeout(() => {
-    btn.classList.remove('wrong');
+    setTimeout(() => { 
+    btn.classList.remove("wrong");
     btn.disabled = false;
-}, 1000);
+    btn.blur();
+}, 500);
     if(Array.from(optionsWrap.children).every(b=>b.disabled)){
       clearInterval(timerId); showAnswerBtn.disabled=false; return;
     }
