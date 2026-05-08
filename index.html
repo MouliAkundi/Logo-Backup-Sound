@@ -730,7 +730,7 @@ function renderTF(q){
   optionsWrap.style.display="grid";
   optionsWrap.style.gridTemplateColumns="1fr 1fr";
   const raw=q.rawAnswer.toLowerCase();
-  correctIndex=(raw==="true"||raw==="a"||raw==="1")?0:1;
+  correctIndex=(raw==="true"||raw==="t"||raw==="a"||raw==="1")?0:1;
   ["True","False"].forEach((label,i)=>{
     const btn=document.createElement("button");
     btn.className="option"; btn.dataset.index=i; btn.textContent=label;
