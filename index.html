@@ -95,14 +95,50 @@ button{cursor:pointer;}
 
 <div id="instructionScreen">
   <h2 style="color:var(--royal-blue);">Instructions &amp; Rules</h2>
-  <ul>
-    <li>Teams answer in turn. Three types: <b>MCQ</b>, <b>True/False</b>, <b>Fill in the Blank</b>.</li>
-    <li>Correct on your turn = <b>4 marks</b>. On pass: 1st=3, 2nd=2, 3rd=1. After 3 passes, no marks.</li>
-    <li>Timer goes <b style="color:red;">red</b> below 10s. Screen flashes red at 0.</li>
-    <li>For Fill in Blank: type answer and press <b>Submit</b> or Enter.</li>
-    <li>Click <b>Show Correct Answer</b> then <b>Next Question</b> to continue.</li>
-    <li>Progress is <b>auto-saved</b> every second. Use Export for extra safety.</li>
-  </ul>
+ <ul>
+  <li>Teams will answer questions in rotation.</li>
+
+  <li>
+    Three question formats:
+    <b>Multiple Choice (MCQ)</b>,
+    <b>True / False (TF)</b>,
+    and <b>Fill in the Blank (FITB)</b>.
+  </li>
+
+  <li>
+    Correct answer on direct turn:
+    <b>4 marks</b>.
+  </li>
+
+  <li>
+    For MCQ and FITB questions, unanswered or incorrect questions
+    will pass to the next teams with reduced marks:
+    <b>3 → 2 → 1</b>.
+  </li>
+
+  <li>
+    True / False questions will <b>not</b> be passed to other teams.
+  </li>
+
+  <li>
+    The countdown timer turns
+    <b style="color:red;">red</b>
+    during the final 10 seconds.
+  </li>
+
+  <li>
+    For FITB questions, type the answer and press
+    <b>Submit</b> or <b>Enter</b>.
+  </li>
+
+  <li>
+    Click <b>Show Correct Answer</b> before proceeding to the next question.
+  </li>
+
+  <li>
+    Quiz progress is automatically saved for recovery during interruptions.
+  </li>
+</ul>
   <div class="timer-settings">
     <label>Main Timer (seconds): <input type="number" id="mainTimerSetting" min="5" value="40"/></label>
     <label>Pass Timer (seconds): <input type="number" id="passTimerSetting" min="5" value="20"/></label>
